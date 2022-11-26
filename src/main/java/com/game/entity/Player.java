@@ -5,6 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(schema = "rpg", name = "player")
+@NamedQuery(name = "player_getAllCount", query = "SELECT COUNT(p) FROM Player p")
 public class Player {
     @Id
     @Column(name = "id", nullable = false)
